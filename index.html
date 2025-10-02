@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Khai Trương - Simple Beauty</title>
+    <meta name="description" content="Thiệp mời khai trương Simple Beauty - Địa chỉ: 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025. Rất hân hạnh được đón tiếp quý khách!">
+
+    <meta property="og:title" content="Thiệp Mời Khai Trương - Simple Beauty">
+    <meta property="og:description" content="Trân trọng kính mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
+    <meta property="og:image" content="/images/logo.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thiệp Mời Khai Trương - Simple Beauty">
+  <meta name="twitter:description" content="Hân hạnh mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts Dancing Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        /* Reset CSS và biến toàn cục */
+        :root {
+            --primary-color: #37d4ad;
+            --secondary-color: #13438b;
+            --accent-color: #d4f8f3;
+            --text-color: #333;
+            --light-color: #fff;
+            --dark-color: #222;
+            --transition: all 0.3s ease;
+            --font-decorative: 'Dancing Script', cursive;
+            /* đổi thành Dancing Script */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Itim', cursive;
+
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+            background-color: var(--accent-color);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        /* Animation pháo hoa */
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .firework {
+            position: absolute;
+            top: -20px;
+            /* xuất phát từ trên */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff, #ffcc00, #ff6699);
+            box-shadow: 0 0 10px #fff;
+            animation: fall-animation 20s linear forwards;
+        }
+
+        /* Hạt rơi xuống + lắc lư */
+        @keyframes fall-animation {
+            0% {
+                transform: translateX(0) translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            25% {
+                transform: translateX(-15px) translateY(25vh) rotate(30deg);
+            }
+
+            50% {
+                transform: translateX(15px) translateY(50vh) rotate(-30deg);
+            }
+
+            75% {
+                transform: translateX(-10px) translateY(75vh) rotate(15deg);
+            }
+
+            100% {
+                transform: translateX(10px) translateY(100vh) rotate(-15deg);
+                opacity: 0;
+            }
+        }
+
+        /* Section 1: Banner */
+        .banner {
+            position: relative;
+            height: 75vh;
+            background:
+                url('/images/1-2.jpg');
+            background-size: auto 100%;
+            background-origin: content-box;
+            background-position: 50% 50%;
+            background-repeat: repeat;
+            background-attachment: scroll;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+            overflow: hidden;
+        }
+
+        /* Section 2: Grand Opening */
+        /* .grand-opening {
+            position: relative;
+            padding: 100px 20px 80px;
+            background-color: var(--accent-color);
+            text-align: center;
+        } */
+        .grand-opening {
+            position: relative;
+            padding: 20px 20px 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Background với ảnh spa */
+        .grand-opening::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        /* Overlay hoa văn tinh tế */
+        .grand-opening::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* Overlay màu pastel nhẹ nhàng */
+                linear-gradient(135deg,
+                    rgba(248, 246, 242, 0.85) 0%,
+                    rgba(255, 250, 245, 0.9) 100%),
+                /* Hoa văn lá cây tinh tế */
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,30' fill='none' stroke='%238b7355' stroke-width='0.5' opacity='0.1'/%3E%3Cpath d='M10,70 Q30,50 50,70 T90,70' fill='none' stroke='%238b7355' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+            background-size: cover, 200px 200px;
+            z-index: -1;
+        }
+
+
+        .title-container {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-family: var(--font-decorative);
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            animation: titleGlow 3s infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            100% {
+                text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .opening-date {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .divider {
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px auto;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .divider-svg {
+            transition: all 0.3s ease;
+        }
+
+        .divider:hover .divider-svg {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Animation cho phiên bản lá */
+        @keyframes leafFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-5px) rotate(2deg);
+            }
+        }
+
+        .divider-svg path {
+            animation: leafFloat 4s ease-in-out infinite;
+        }
+
+        .divider-svg path:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .divider-svg path:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .divider-svg path:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        /* Section 3: Buttons và Giới thiệu */
+        .action-buttons {
+            padding: 60px 20px;
+            background-color: var(--light-color);
+            text-align: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        button {
+            font-family: 'Itim', cursive;
+        }
+
+        .btn {
+            font-family: 'Itim', cursive;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+        }
+
+        .btn-accent {
+            background-color: #6cc97d;
+            color: var(--dark-color);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image,
+        .about-content {
+            flex: 1 1 300px;
+            transition: var(--transition);
+        }
+
+        .about-image {
+            height: 400px;
+            background: url('images/1-5.jpg') center/cover no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            padding: 20px;
+        }
+
+        .about-image:hover,
+        .about-content:hover {
+            transform: scale(1.03);
+        }
+
+        /* Section 4: Timeline */
+        .timeline-section {
+            padding: 80px 20px;
+            background-color: var(--accent-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            font-family: var(--font-decorative);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--light-color);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--light-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            background-color: var(--light-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section 5: Album */
+        .album-section {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+        }
+
+        .grid {
+            /* background: #DDD; */
+        }
+
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- .grid-item ---- */
+
+        .grid-sizer,
+        .grid-item {
+            width: 33.333%;
+        }
+
+        .grid-item {
+            float: left;
+        }
+
+        .grid-item img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .view-more-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .view-more-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Section 6: Countdown */
+        .countdown-section {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* Background ảnh spa sang trọng */
+        .countdown-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -2;
+            filter: brightness(0.9) saturate(1.1);
+        }
+
+        /* Overlay gradient tinh tế với hoa văn */
+        .countdown-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* Gradient màu spa nhẹ nhàng */
+                linear-gradient(135deg,
+                    rgba(248, 233, 233, 0.85) 0%,
+                    rgba(232, 244, 241, 0.9) 50%,
+                    rgba(255, 250, 250, 0.8) 100%),
+                /* Hoa văn lá cây tinh tế */
+                url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,50 Q50,30 70,50 T110,50' fill='none' stroke='%23d4af37' stroke-width='0.8' opacity='0.15'/%3E%3Cpath d='M40,100 Q60,80 80,100 T120,100' fill='none' stroke='%23b76e79' stroke-width='0.8' opacity='0.15'/%3E%3Ccircle cx='75' cy='75' r='8' fill='%23009975' opacity='0.1'/%3E%3Cpath d='M100,30 Q120,50 100,70' fill='none' stroke='%236a0dad' stroke-width='0.8' opacity='0.15'/%3E%3C/svg%3E");
+            background-size: cover, 200px 200px;
+            z-index: -1;
+        }
+
+        .countdown-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            background-color: var(--accent-color);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+
+        .event-date {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: var(--secondary-color);
+        }
+
+        .event-location {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .map-btn {
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+
+        .map-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section 7: Invitation Card */
+        .invitation-section {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+            text-align: center;
+        }
+
+        .invitation-card {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .invitation-image {
+            width: 100%;
+            height: 715px;
+            background: url('/images/thiep-moi.png') center/cover no-repeat;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .invitation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Section 8: Lời ngỏ */
+        .message-section {
+            padding: 80px 20px;
+            background-color: var(--accent-color);
+        }
+
+        .message-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .message-image,
+        .message-content {
+            flex: 1 1 300px;
+        }
+
+        .message-image {
+            height: 400px;
+            background: url('/images/1-3.jpg') center/cover no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-content {
+            padding: 20px;
+        }
+
+        /* Section 9: Form chúc mừng */
+        /* .wishes-section {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+        } */
+        /* Section 10: Hộp mừng */
+        .wishes-section {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* Background ảnh quà tặng spa sang trọng */
+        .wishes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -2;
+            filter: brightness(0.9) saturate(1.1);
+        }
+
+        /* Overlay gradient tinh tế với hoa văn quà tặng */
+        .wishes-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* Gradient màu spa nhẹ nhàng */
+                linear-gradient(135deg,
+                    rgba(248, 233, 233, 0.88) 0%,
+                    rgba(230, 230, 250, 0.92) 50%,
+                    rgba(232, 244, 241, 0.85) 100%),
+                /* Hoa văn ribbon và quà tặng */
+                url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,80 L70,60 L90,80 L110,60 L130,80 L150,60' fill='none' stroke='%23d4af37' stroke-width='1.5' opacity='0.1'/%3E%3Crect x='80' y='100' width='40' height='30' fill='%23b76e79' opacity='0.08'/%3E%3Cpath d='M80,100 L100,85 L120,100' fill='%23009975' opacity='0.1'/%3E%3Ccircle cx='60' cy='120' r='8' fill='%236a0dad' opacity='0.08'/%3E%3Ccircle cx='140' cy='130' r='6' fill='%23d4af37' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: cover, 300px 300px;
+            z-index: -1;
+        }
+
+        .wishes-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        .submit-btn {
+            font-family: 'Itim', cursive;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .view-wishes-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .view-wishes-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Section 10: Hộp mừng */
+        .gift-section {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* Background ảnh quà tặng spa sang trọng */
+        .gift-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -2;
+            filter: brightness(0.9) saturate(1.1);
+        }
+
+        /* Overlay gradient tinh tế với hoa văn quà tặng */
+        .gift-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* Gradient màu spa nhẹ nhàng */
+                linear-gradient(135deg,
+                    rgba(248, 233, 233, 0.88) 0%,
+                    rgba(230, 230, 250, 0.92) 50%,
+                    rgba(232, 244, 241, 0.85) 100%),
+                /* Hoa văn ribbon và quà tặng */
+                url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,80 L70,60 L90,80 L110,60 L130,80 L150,60' fill='none' stroke='%23d4af37' stroke-width='1.5' opacity='0.1'/%3E%3Crect x='80' y='100' width='40' height='30' fill='%23b76e79' opacity='0.08'/%3E%3Cpath d='M80,100 L100,85 L120,100' fill='%23009975' opacity='0.1'/%3E%3Ccircle cx='60' cy='120' r='8' fill='%236a0dad' opacity='0.08'/%3E%3Ccircle cx='140' cy='130' r='6' fill='%23d4af37' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: cover, 300px 300px;
+            z-index: -1;
+        }
+
+        .gift-btn {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            font-size: 3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: shake 2s infinite;
+            transition: var(--transition);
+        }
+
+        .gift-btn:hover {
+            animation: none;
+            transform: scale(1.1);
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: rotate(-5deg);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* Section 11: Ảnh */
+        .image-section {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+        }
+
+        .full-image {
+            height: 100vh;
+            background: url('/images/1-5.jpg') center/cover no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section 12: Thank you */
+        .thankyou-section {
+            padding: 100px 20px;
+            background-color: var(--accent-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .thankyou-title {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-family: var(--font-decorative);
+        }
+
+        .heart {
+            font-size: 10rem;
+            color: #e74c3c;
+            animation: heartbeat 1.5s infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(0.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .signature {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-top: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('/images/logo.jpg') center/cover no-repeat;
+            margin: 30px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fixed buttons */
+        .fixed-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .fixed-buttons.right {
+            left: auto;
+            right: 20px;
+        }
+
+        .fixed-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .fixed-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .music-btn {
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hotline-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            animation: ripple 2s linear infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .scroll-top-btn {
+            display: none;
+        }
+
+        .menu-btn {
+            position: relative;
+        }
+
+        .menu-dropdown {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-dropdown.active {
+            display: flex;
+        }
+
+        .menu-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+
+        /* Popups */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-content {
+            background-color: var(--light-color);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            transform: translateY(50px);
+            transition: var(--transition);
+        }
+
+        .popup.active .popup-content {
+            /* transform: translateY(0); */
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--dark-color);
+        }
+
+        .notification {
+
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-150%);
+            background: linear-gradient(135deg, var(--light-color) 0%, #f8f9fa 100%);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.25),
+                0 10px 30px rgba(212, 175, 55, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 500px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .notification.active {
+            opacity: 1;
+            visibility: visible;
+            animation: quantumEntrance 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+                floatEffect 6s ease-in-out infinite 1.2s;
+        }
+
+        .notification.exiting {
+            animation: quantumExit 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+        }
+
+        @keyframes quantumEntrance {
+            0% {
+                transform: translateX(-50%) translateY(-150%) scale(0.3) rotate(-15deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10%) scale(1.1) rotate(5deg);
+                opacity: 1;
+            }
+
+            70% {
+                transform: translateX(-50%) translateY(-5%) scale(0.95) rotate(-2deg);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes quantumExit {
+            0% {
+                transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+
+            30% {
+                transform: translateX(-50%) translateY(-20%) scale(1.1) rotate(5deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(-150%) scale(0.3) rotate(-15deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes floatEffect {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0px);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+        }
+
+        .notification-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+            animation: iconPulse 3s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes iconPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        .notification-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .notification-name {
+            font-weight: 700;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .notification-message {
+            color: var(--dark-color);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .notification-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            border-radius: 0 0 20px 20px;
+            transform-origin: left;
+            animation: progressBar 5s linear forwards;
+        }
+
+        @keyframes progressBar {
+            0% {
+                transform: scaleX(1);
+            }
+
+            100% {
+                transform: scaleX(0);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateX(-50%) translateY(-100%);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notification {
+                padding: 15px;
+                gap: 12px;
+                max-width: 90%;
+            }
+
+            .notification-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .notification-name {
+                font-size: 1rem;
+            }
+
+            .notification-message {
+                font-size: 0.9rem;
+                -webkit-line-clamp: 3;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: 21px;
+            }
+
+            .countdown-timer {
+                flex-wrap: wrap;
+            }
+
+            .countdown-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+
+            .fixed-buttons {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .fixed-buttons.right {
+                right: 10px;
+            }
+
+            .fixed-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .thankyou-title {
+                font-size: 2.5rem;
+            }
+
+            .heart {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .notification {
+                /* flex-direction: column; */
+                text-align: center;
+                gap: 10px;
+                max-width: 60%;
+            }
+
+            .notification-content {
+                width: 100%;
+            }
+        }
+
+        .timeline-section {
+            padding: 80px 20px;
+            background-color: var(--accent-color);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            font-family: var(--font-decorative);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: fadeIn 1s ease-out;
+            margin-bottom: 60px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 25px;
+            background-color: var(--light-color);
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--light-color);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            background-color: var(--light-color);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+        }
+
+        .timeline-content p {
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .timeline-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .timeline-image:hover {
+            transform: scale(1.03);
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .full-image {
+                height: 400px;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: 21px;
+            }
+
+            .timeline-date {
+                padding-left: 20px;
+            }
+        }
+
+        /* Popup Overlay */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+        }
+
+        /* Popup Content */
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1000px;
+            height: 80vh;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Slider Container */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Main Slide */
+        .main-slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+
+        .main-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Navigation Buttons */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .slider-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1002;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+
+        /* Thumbnail Gallery */
+        .thumbnail-gallery {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            overflow-x: auto;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            border-color: #fff;
+        }
+
+        .thumbnail.active {
+            border-color: #667eea;
+            transform: scale(1.1);
+        }
+
+        /* Counter */
+        .image-counter {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 1001;
+        }
+
+        /* Loading */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .invitation-image {
+                width: 100%;
+                height: 460px;
+
+            }
+
+            .popup-content {
+                width: 95%;
+                height: 70vh;
+            }
+
+            .thumbnail-gallery {
+                height: 80px;
+                padding: 0 40px;
+            }
+
+            .thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+
+            .slider-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animation pháo hoa -->
+    <div class="fireworks-container" id="fireworks"></div>
+
+    <!-- Section 1: Banner -->
+    <section class="banner" id="section1">
+        <!-- Nội dung banner sẽ được đặt trong section 2 -->
+    </section>
+
+    <!-- Section 2: Grand Opening -->
+    <section class="grand-opening" id="section2">
+        <div class="title-container">
+            <h1 class="main-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out">Grand Opening Invitation</h1>
+            <h2 class="subtitle">Simple Beauty</h2>
+            <p class="opening-date" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out">10:00 ngày 10-10-2025</p>
+            <p class="tagline">Vẻ đẹp giản đơn – Quyến rũ bất tận</p>
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="40" viewBox="0 0 431.56 40"
+                    preserveAspectRatio="none" class="divider-svg">
+                    <!-- Lá bên trái -->
+                    <path d="M100,20 Q120,10 140,20 T180,20" fill="none" stroke="#8b4513" stroke-width="1.5" />
+                    <path d="M140,20 Q160,30 180,20" fill="none" stroke="#8b4513" stroke-width="1.5" />
+
+                    <!-- Hoa chính giữa -->
+                    <circle cx="215.78" cy="20" r="8" fill="#d4af37" opacity="0.8" />
+                    <circle cx="215.78" cy="20" r="4" fill="#8b4513" />
+
+                    <!-- Lá bên phải -->
+                    <path d="M250,20 Q270,10 290,20 T330,20" fill="none" stroke="#8b4513" stroke-width="1.5" />
+                    <path d="M290,20 Q310,30 330,20" fill="none" stroke="#8b4513" stroke-width="1.5" />
+                </svg>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <a href="#section7" class="btn btn-primary" data-aos="fade-right" data-aos-delay="50"
+                data-aos-duration="400" data-aos-easing="ease-in-out">Thiệp mời</a>
+            <a href="#section9" class="btn btn-secondary" data-aos="fade-left" data-aos-delay="50"
+                data-aos-duration="400" data-aos-easing="ease-in-out">Gửi lời chúc</a>
+            <a href="#section9" class="btn btn-accent" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out">Mừng khai trương</a>
+        </div>
+    </section>
+
+    <section class="action-buttons" id="section3">
+
+        <div class="about-container">
+            <div class="about-image" data-aos="flip-left" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out"></div>
+            <div class="about-content" data-aos="flip-right" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <h2 class="section-title">Về Simple Beauty</h2>
+                <p>Simple Beauty được thành lập với mong muốn mang đến một không gian thư giãn và chăm sóc sắc đẹp hoàn
+                    hảo cho phụ nữ hiện đại. Chúng tôi tin rằng vẻ đẹp thực sự bắt nguồn từ sự tự tin và hạnh phúc bên
+                    trong.</p>
+                <p>Với đội ngũ chuyên gia giàu kinh nghiệm và các sản phẩm chăm sóc da cao cấp, chúng tôi cam kết mang
+                    đến cho khách hàng những trải nghiệm dịch vụ tốt nhất.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Timeline -->
+    <section class="timeline-section" id="section4">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Our Journey</h2>
+        <p class="section-subtitle">Bắt đầu từ ước mơ mang đến một không gian thư giãn riêng cho phái đẹp, nơi mỗi người
+            phụ nữ có thể tìm thấy sự dịu dàng, cân bằng và tự tin.</p>
+
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">Tháng 3/2020</div>
+                    <h3>Bắt đầu học nghề</h3>
+                    <p>Bắt đầu hành trình học nghề spa và chăm sóc sắc đẹp tại Học viện Thẩm mỹ Quốc tế.</p>
+                    <div class="timeline-image">
+                        <img src="/images/1-1.jpg" alt="Học nghề spa">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">Tháng 6/2021</div>
+                    <h3>Tốt nghiệp và ra nghề</h3>
+                    <p>Hoàn thành khóa học với bằng xuất sắc và bắt đầu làm việc tại các spa cao cấp để tích lũy kinh
+                        nghiệm.</p>
+                    <div class="timeline-image">
+                        <img src="/images/1-6.jpg" alt="Tốt nghiệp">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">Tháng 1/2023</div>
+                    <h3>Tìm được mặt bằng</h3>
+                    <p>Sau nhiều tháng tìm kiếm, đã tìm được vị trí lý tưởng tại 60 Trần Hưng Đạo, Quận 1, TP.HCM.</p>
+                    <div class="timeline-image">
+                        <img src="/images/6.jpg" alt="Mặt bằng spa">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">Tháng 3/2023 - Tháng 8/2023</div>
+                    <h3>Cải tạo không gian</h3>
+                    <p>Thiết kế và cải tạo không gian spa theo phong cách tối giản, sang trọng và ấm cúng.</p>
+                    <div class="timeline-image">
+                        <img src="/images/87262009d87f52210b6e.jpg" alt="Cải tạo không gian">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">Tháng 9/2023</div>
+                    <h3>Hoàn thành và nhận khách</h3>
+                    <p>Hoàn thành mọi công đoạn chuẩn bị và bắt đầu nhận khách hàng đầu tiên.</p>
+                    <div class="timeline-image">
+                        <img src="/images/1-4.jpg" alt="Khách hàng đầu tiên">
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <div class="timeline-content">
+                    <div class="timeline-date">10:00 ngày 10/10/2025</div>
+                    <h3>Khai trương chính thức</h3>
+                    <p>Tổ chức lễ khai trương chính thức với sự tham gia của đối tác và khách hàng thân thiết.</p>
+                    <div class="timeline-image">
+                        <img src="/images/0ab70799ffef75b12cfe.jpg" alt="Khai trương spa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Album -->
+    <section class="album-section" id="section5">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Album Simple Beauty</h2>
+        <p class="section-subtitle">Vẻ đẹp là hành trình tự nhiên nhất, chỉ cần yêu bản thân thì chắc chắn sẽ tìm thấy
+            sự tỏa sáng.</p>
+
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item">
+                <img src="/images/1-1.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/1-2.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/1-3.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/1-4.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/1-5.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/1-6.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/6.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/0ab70799ffef75b12cfe.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="/images/9.jpg" />
+            </div>
+        </div>
+
+        <button class="view-more-btn" id="viewMoreBtn">Xem thêm hình ảnh</button>
+
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <button class="close-btn" id="closeBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="image-counter" id="imageCounter">1 / 20</div>
+
+                <div class="slider-container">
+                    <div class="main-slide" id="mainSlide">
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i> Đang tải...
+                        </div>
+                    </div>
+
+                    <button class="slider-nav prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <button class="slider-nav next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails sẽ được thêm bằng JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Countdown -->
+    <section class="countdown-section" id="section6">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Sự kiện khai trương</h2>
+        <p class="section-subtitle">Cùng đếm ngược cùng tôi nhé</p>
+
+        <div class="countdown-box" data-aos="flip-right" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="#d4af37" stroke-width="2" />
+                <path d="M12 6V12L16 14" stroke="#d4af37" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <h3 class="countdown-title">Lễ khai trương</h3>
+
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Ngày</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Giờ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Phút</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Giây</div>
+                </div>
+            </div>
+
+            <p class="event-date">10:00 ngày 10-10-2025</p>
+            <p class="event-date">(Nhằm ngày 09 tháng 09 năm Ất Tỵ)</p>
+
+            <p class="event-location">
+                <strong>Tại</strong><br>
+                Địa chỉ: 60, đường Trần Hưng Đạo, Phường Đông Hoà, Tp HCM
+            </p>
+
+            <a href="https://www.google.com/maps/place/60+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+%C4%90%C3%B4ng+Ho%C3%A0,+D%C4%A9+An,+B%C3%ACnh+D%C6%B0%C6%A1ng,+Vi%E1%BB%87t+Nam/@10.8935996,106.7841587,70m/data=!3m1!1e3!4m6!3m5!1s0x3174d8ed34121605:0xf70eb7ca4a9e6b17!8m2!3d10.8937106!4d106.7842345!16s%2Fg%2F11lmpd_rl6?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+                class="map-btn">Xem bản đồ</a>
+        </div>
+    </section>
+
+    <!-- Section 7: Invitation Card -->
+    <section class="invitation-section" id="section7">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Thiệp mời</h2>
+        <p class="section-subtitle">Trân trọng kính mời</p>
+
+        <div class="invitation-card">
+            <div class="invitation-image" data-aos="flip-left" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out"></div>
+            <div class="invitation-buttons">
+                <a href="#section9" class="btn btn-primary">Gửi lời chúc</a>
+                <a href="https://www.google.com/maps/place/60+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+%C4%90%C3%B4ng+Ho%C3%A0,+D%C4%A9+An,+B%C3%ACnh+D%C6%B0%C6%A1ng,+Vi%E1%BB%87t+Nam/@10.8935996,106.7841587,70m/data=!3m1!1e3!4m6!3m5!1s0x3174d8ed34121605:0xf70eb7ca4a9e6b17!8m2!3d10.8937106!4d106.7842345!16s%2Fg%2F11lmpd_rl6?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+                    class="btn btn-secondary">Xem bản đồ</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Lời ngỏ -->
+    <section class="message-section" id="section8">
+        <div class="message-container">
+            <div class="message-image" data-aos="flip-up" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out"></div>
+            <div class="message-content" data-aos="flip-down" data-aos-delay="50" data-aos-duration="400"
+                data-aos-easing="ease-in-out">
+                <h2 class="section-title">Lời ngỏ</h2>
+                <p>Chúng tôi trân trọng gửi lời cảm ơn đến Quý khách đã luôn tin tưởng và đồng hành.</p>
+                <p>Ngày khai trương đánh dấu một khởi đầu mới cho Simple Beauty, nơi chúng tôi mong muốn mang đến cho
+                    bạn những phút giây thư giãn, chăm sóc sắc đẹp và tái tạo năng lượng.</p>
+                <p>Sự hiện diện của Quý khách trong ngày đặc biệt này chính là niềm vinh hạnh và động lực lớn lao để
+                    chúng tôi nỗ lực hơn mỗi ngày.</p>
+                <p>Rất mong được chào đón và phục vụ Quý khách!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Form chúc mừng -->
+    <section class="wishes-section" id="section9">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Gửi lời chúc</h2>
+        <p class="section-subtitle">Chia sẻ niềm vui cùng chúng tôi</p>
+
+        <form class="wishes-form" id="wishesForm" data-aos="fade-down-left" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">
+            <div class="form-group">
+                <label for="name">Họ tên</label>
+                <input type="text" id="name" class="form-control" placeholder="Nhập họ tên của bạn">
+            </div>
+            <div class="form-group">
+                <label for="message">Lời chúc</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="Nhập lời chúc của bạn"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="predefined-message">Lời chúc có sẵn (tùy chọn)</label>
+                <select id="predefined-message" class="form-control">
+                    <option value="">Chọn lời chúc có sẵn</option>
+                    <option value="Chúc mừng khai trương! Thành công rực rỡ!">Chúc mừng khai trương! Thành công rực rỡ!
+                    </option>
+                    <option value="Chúc spa ngày càng phát triển, đông khách!">Chúc spa ngày càng phát triển, đông
+                        khách!</option>
+                    <option value="Thành công và thịnh vượng đến với Simple Beauty!">Thành công và thịnh vượng đến với
+                        Simple Beauty!</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Gửi lời chúc cho chủ shop</button>
+            <a href="https://docs.google.com/spreadsheets/d/1pjqxswUUx_GUDbe0R9y5Tlmz2U1o2XKj8tB-fiYPuHE/edit?hl=vi&gid=1774613536#gid=1774613536"
+                class="view-wishes-link">Xem lời chúc của mọi người</a>
+        </form>
+    </section>
+
+    <!-- Section 10: Hộp mừng -->
+    <section class="gift-section" id="section10">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">Hộp mừng khai trương</h2>
+        <p class="section-subtitle">Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biêt của tôi.</p>
+
+        <button class="gift-btn" id="giftBtn" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">
+            <i class="fas fa-gift"></i>
+        </button>
+    </section>
+
+    <!-- Section 11: Ảnh -->
+    <section class="image-section" id="section11">
+        <div class="full-image"></div>
+    </section>
+
+    <!-- Section 12: Thank you -->
+    <section class="thankyou-section" id="section12">
+        <h2 class="thankyou-title">Thank You</h2>
+        <div class="heart">❤</div>
+        <p class="signature">Simple Beauty</p>
+        <div class="logo"></div>
+    </section>
+
+    <!-- Fixed buttons -->
+    <div class="fixed-buttons">
+        <a href="tel:0899993118" class="fixed-btn hotline-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <button class="fixed-btn music-btn" id="musicBtn">
+            <i class="fas fa-music" id="musicIcon"></i>
+        </button>
+    </div>
+
+    <div class="fixed-buttons right">
+        <button class="fixed-btn scroll-top-btn" id="scrollTopBtn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <button class="fixed-btn menu-btn" id="menuBtn">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </button>
+        <div class="menu-dropdown" id="menuDropdown">
+            <a href="#section10" class="menu-item">
+                <i class="fas fa-gift"></i>
+            </a>
+            <a href="#section9" class="menu-item">
+                <i class="fas fa-comment"></i>
+            </a>
+            <a href="#section7" class="menu-item">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div class="popup" id="giftPopup">
+        <div class="popup-content">
+            <span class="close-popup" id="closeGiftPopup">&times;</span>
+            <h2>Cảm ơn bạn!</h2>
+            <p>Cảm ơn bạn đã gửi lời chúc đến Simple Beauty</p>
+            <div class="qr-code">
+                QR Code thanh toán
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <div class="notification-icon">🎉</div>
+        <div class="notification-content">
+            <div class="notification-name" id="notificationName">Người gửi</div>
+            <div class="notification-message" id="notificationMessage">Lời chúc sẽ hiển thị ở đây...</div>
+        </div>
+        <div class="notification-progress"></div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var grid = document.querySelector('.grid');
+
+            // Khởi tạo Masonry
+            var msnry = new Masonry(grid, {
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+            });
+
+            // Sau khi từng ảnh load xong thì Masonry sẽ sắp xếp lại
+            imagesLoaded(grid).on('progress', function () {
+                msnry.layout();
+            });
+        });
+    </script>
+    <script>
+        // Google Apps Script URL (thay bằng URL của bạn)
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypfjiVxhNjmknmRoM8q2bT2-hsiFVIh2-QUVbTsDsTYTqquyB-IS1PYCj6n9Fa9_AB/exec';
+
+        // Biến toàn cục
+        let wishesData = [];
+        let currentWishIndex = 0;
+        let notificationInterval;
+
+        // Khởi tạo
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeForm();
+            loadWishesData();
+            startNotificationCycle();
+        });
+
+        // Khởi tạo form
+        function initializeForm() {
+            const form = document.getElementById('wishesForm');
+            const predefinedSelect = document.getElementById('predefined-message');
+            const messageTextarea = document.getElementById('message');
+
+            // Xử lý chọn lời chúc có sẵn
+            predefinedSelect.addEventListener('change', function () {
+                if (this.value) {
+                    messageTextarea.value = this.value;
+                }
+            });
+
+            // Xử lý submit form
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !message) {
+                    alert('Vui lòng điền đầy đủ thông tin!');
+                    return;
+                }
+                // alert(33)
+
+                await submitWish(name, message);
+            });
+        }
+
+        // Gửi lời chúc lên Google Sheets
+        async function submitWish(name, message) {
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+
+            try {
+                submitBtn.textContent = 'Đang gửi...';
+                submitBtn.disabled = true;
+
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: "no-cors",
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: 'submitWish',
+                        name: name,
+                        message: message
+                        // Không cần gửi timestamp nữa, server sẽ tự xử lý
+                    })
+                });
+                alert('Lời chúc của bạn đã được gửi thành công! Cảm ơn bạn!');
+
+                document.getElementById('wishesForm').reset();
+                
+                wishesData.unshift({
+                    name: name,
+                    message: message,
+                    timestamp: result.timestamp || new Date().toLocaleString('vi-VN')
+                });
+                const result = await response.json();
+
+                showCustomNotification(name, message);
+
+                if (result.success) {
+
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                // console.error('Lỗi khi gửi lời chúc:', error);
+                // alert('Có lỗi xảy ra khi gửi lời chúc. Vui lòng thử lại!');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Load dữ liệu từ Google Sheets
+        async function loadWishesData() {
+            try {
+                const response = await fetch(`${SCRIPT_URL}?action=getWishes`);
+                const result = await response.json();
+
+                if (result.success && result.data) {
+                    wishesData = result.data;
+                }
+            } catch (error) {
+                console.error('Lỗi khi load dữ liệu:', error);
+                wishesData = [
+                    { name: "Anh Tú", message: "Chúc mừng khai trương! Thành công rực rỡ!" },
+                    { name: "Minh Châu", message: "Chúc spa ngày càng phát triển, đông khách!" },
+                    { name: "Quốc Bảo", message: "Thành công và thịnh vượng đến với Simple Beauty!" }
+                ];
+            } finally {
+                // Sau khi có dữ liệu (thành công hoặc fallback) mới start cycle
+                startNotificationCycle();
+            }
+        }
+
+        // Hiển thị notification với animation
+        function showCustomNotification(name, message) {
+            const notification = document.getElementById('notification');
+            const nameElement = document.getElementById('notificationName');
+            const messageElement = document.getElementById('notificationMessage');
+
+            // Cắt ngắn message nếu quá dài
+            const truncatedMessage = message.length > 100 ?
+                message.substring(0, 100) + '...' : message;
+
+            nameElement.textContent = name;
+            messageElement.textContent = truncatedMessage;
+
+            // Dừng interval hiện tại
+            if (notificationInterval) {
+                clearInterval(notificationInterval);
+            }
+
+            // Hiển thị notification
+            notification.classList.remove('active', 'exiting');
+            void notification.offsetWidth; // Trigger reflow
+
+            notification.classList.add('active');
+
+            // Tự động ẩn sau 5 giây
+            setTimeout(() => {
+                notification.classList.add('exiting');
+                setTimeout(() => {
+                    notification.classList.remove('active', 'exiting');
+                    // Tiếp tục cycle
+                    startNotificationCycle();
+                }, 800);
+            }, 5000);
+        }
+
+        // Hiển thị notification từ danh sách
+        function showNextWish() {
+            console.log("ab2")
+
+            if (wishesData.length === 0) return;
+
+            currentWishIndex = (currentWishIndex + 1) % wishesData.length;
+            const wish = wishesData[currentWishIndex];
+            console.log("ab2")
+
+            showCustomNotification(wish.name, wish.message);
+        }
+
+        // Bắt đầu chu kỳ hiển thị notification
+        function startNotificationCycle() {
+
+            if (wishesData.length > 0) {
+                // Hiển thị notification đầu tiên ngay lập tức
+                setTimeout(() => {
+                    showNextWish();
+                }, 3000);
+
+                // Sau đó hiển thị mỗi 15 giây
+                notificationInterval = setInterval(showNextWish, 8000);
+            }
+        }
+    </script>
+    <script>
+        // Danh sách 20 ảnh mẫu (thay bằng đường dẫn thực tế của bạn)
+        const images = [
+            '/images/1-1.jpg',
+            '/images/1-2.jpg',
+            '/images/1-3.jpg',
+            '/images/1-4.jpg',
+            '/images/1-5.jpg',
+            '/images/1-6.jpg',
+            '/images/1.jpg',
+            '/images/2.jpg',
+            '/images/3.jpg',
+            '/images/4.jpg',
+            '/images/5.jpg',
+            '/images/6.jpg',
+            '/images/7.jpg',
+            '/images/8.jpg',
+            '/images/9.jpg',
+            '/images/10.jpg',
+            '/images/11.jpg',
+            '/images/12.jpg',
+            '/images/13.jpg',
+            '/images/14.jpg',
+            '/images/15.jpg',
+            '/images/16.jpg',
+            '/images/17.jpg',
+            '/images/18.jpg',
+            '/images/20.jpg',
+            '/images/21.jpg',
+            '/images/22.jpg',
+            '/images/90db7df685800fde5691.jpg',
+            '/images/87262009d87f52210b6e.jpg',
+            '/images/3237648001492224205.jpg',
+            '/images/b840916e6918e346ba09.jpg',
+
+        ];
+
+        let currentSlide = 0;
+        const popupOverlay = document.getElementById('popupOverlay');
+        const mainSlide = document.getElementById('mainSlide');
+        const thumbnailGallery = document.getElementById('thumbnailGallery');
+        const imageCounter = document.getElementById('imageCounter');
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Khởi tạo slider
+        function initSlider() {
+            // Tạo thumbnails
+            images.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = image;
+                thumbnail.alt = `Hình ${index + 1}`;
+                thumbnail.className = 'thumbnail';
+                if (index === 0) thumbnail.classList.add('active');
+
+                thumbnail.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+
+                thumbnailGallery.appendChild(thumbnail);
+            });
+
+            // Hiển thị slide đầu tiên
+            showSlide(currentSlide);
+        }
+
+        // Hiển thị slide
+        function showSlide(index) {
+            mainSlide.innerHTML = `
+                <img src="${images[index]}" alt="Hình ${index + 1}" 
+                     onload="this.style.opacity='1'" 
+                     style="opacity:0; transition: opacity 0.3s ease;">
+            `;
+
+            // Cập nhật counter
+            imageCounter.textContent = `${index + 1} / ${images.length}`;
+
+            // Cập nhật active thumbnail
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+
+            currentSlide = index;
+        }
+
+        // Chuyển đến slide cụ thể
+        function goToSlide(index) {
+            if (index >= 0 && index < images.length) {
+                showSlide(index);
+            }
+        }
+
+        // Slide tiếp theo
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % images.length;
+            goToSlide(nextIndex);
+        }
+
+        // Slide trước đó
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + images.length) % images.length;
+            goToSlide(prevIndex);
+        }
+
+        // Mở popup
+        function openPopup() {
+            popupOverlay.style.display = 'block';
+            setTimeout(() => {
+                popupOverlay.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Đóng popup
+        function closePopup() {
+            popupOverlay.classList.remove('active');
+            setTimeout(() => {
+                popupOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Sự kiện bàn phím
+        function handleKeydown(e) {
+            if (!popupOverlay.classList.contains('active')) return;
+
+            switch (e.key) {
+                case 'Escape':
+                    closePopup();
+                    break;
+                case 'ArrowLeft':
+                    prevSlide();
+                    break;
+                case 'ArrowRight':
+                    nextSlide();
+                    break;
+            }
+        }
+
+        // Event Listeners
+        viewMoreBtn.addEventListener('click', openPopup);
+        closeBtn.addEventListener('click', closePopup);
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Đóng khi click ra ngoài
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        // Thêm sự kiện bàn phím
+        document.addEventListener('keydown', handleKeydown);
+
+        // Khởi tạo slider khi trang load
+        document.addEventListener('DOMContentLoaded', initSlider);
+    </script>
+    <script>
+        // Animation pháo hoa
+        function createFireworks() {
+            const container = document.getElementById('fireworks');
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            setInterval(() => {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                firework.style.animationDuration = (Math.random() * 10 + 1) + 's';
+
+                container.appendChild(firework);
+
+                setTimeout(() => {
+                    firework.remove();
+                }, 2000);
+            }, 200);
+        }
+
+        // Countdown timer
+        function updateCountdown() {
+            const targetDate = new Date('2025-10-10T10:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        // Music toggle
+        const musicBtn = document.getElementById('musicBtn');
+        const musicIcon = document.getElementById('musicIcon');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        let isPlaying = false;
+
+        // Hàm bật nhạc khi có tương tác lần đầu
+        function enableMusic() {
+            backgroundMusic.muted = false;
+            backgroundMusic.play().then(() => {
+                isPlaying = true;
+                musicIcon.className = 'fas fa-pause';
+            }).catch(err => console.log("Không thể phát nhạc:", err));
+
+            // Xóa listener sau khi đã phát
+            document.removeEventListener('scroll', enableMusic);
+            document.removeEventListener('click', enableMusic);
+            document.removeEventListener('mousemove', enableMusic);
+            document.removeEventListener('touchstart', enableMusic);
+        }
+
+        // Lắng nghe các hành động đầu tiên
+        document.addEventListener('scroll', enableMusic);
+        document.addEventListener('click', enableMusic);
+        document.addEventListener('mousemove', enableMusic);
+        document.addEventListener('touchstart', enableMusic);
+
+        // Toggle bằng nút
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                backgroundMusic.pause();
+                musicIcon.className = 'fas fa-music';
+            } else {
+                backgroundMusic.play();
+                musicIcon.className = 'fas fa-pause';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'flex';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const menuIcon = document.getElementById('menuIcon');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        menuBtn.addEventListener('click', () => {
+            menuDropdown.classList.toggle('active');
+            if (menuDropdown.classList.contains('active')) {
+                menuIcon.className = 'fas fa-times';
+            } else {
+                menuIcon.className = 'fas fa-bars';
+            }
+        });
+
+        // Gift popup
+        const giftBtn = document.getElementById('giftBtn');
+        const giftPopup = document.getElementById('giftPopup');
+        const closeGiftPopup = document.getElementById('closeGiftPopup');
+
+        giftBtn.addEventListener('click', () => {
+            giftPopup.classList.add('active');
+        });
+
+        closeGiftPopup.addEventListener('click', () => {
+            giftPopup.classList.remove('active');
+        });
+
+    </script>
+    <script>
+        AOS.init({
+            duration: 1200, // thời gian hiệu ứng (ms)
+            once: false,     // chỉ chạy 1 lần khi scroll
+        });
+    </script>
+</body>
+
+</html>
