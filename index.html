@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiệp Mời Khai Trương - Simple Beauty</title>
-    <meta name="description" content="Thiệp mời khai trương Simple Beauty - Địa chỉ: 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025. Rất hân hạnh được đón tiếp quý khách!">
+    <meta name="description"
+        content="Thiệp mời khai trương Simple Beauty - Địa chỉ: 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025. Rất hân hạnh được đón tiếp quý khách!">
 
     <meta property="og:title" content="Thiệp Mời Khai Trương - Simple Beauty">
-    <meta property="og:description" content="Trân trọng kính mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
+    <meta property="og:description"
+        content="Trân trọng kính mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
     <meta property="og:image" content="/images/logo.jpg">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Thiệp Mời Khai Trương - Simple Beauty">
-  <meta name="twitter:description" content="Hân hạnh mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
+    <meta name="twitter:title" content="Thiệp Mời Khai Trương - Simple Beauty">
+    <meta name="twitter:description"
+        content="Hân hạnh mời bạn đến tham dự lễ khai trương Simple Beauty tại 60 Trần Hưng Đạo, Phường Đông Hoà, TP. HCM. Thời gian: 10:00 ngày 10-10-2025.">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -2212,7 +2215,7 @@
     </div>
 
     <!-- Audio -->
-    <audio id="backgroundMusic" loop>
+    <audio id="backgroundMusic" autoplay muted loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -2305,7 +2308,7 @@
                 alert('Lời chúc của bạn đã được gửi thành công! Cảm ơn bạn!');
 
                 document.getElementById('wishesForm').reset();
-                
+
                 wishesData.unshift({
                     name: name,
                     message: message,
@@ -2611,32 +2614,33 @@
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
         }
 
-        // Music toggle
         const musicBtn = document.getElementById('musicBtn');
         const musicIcon = document.getElementById('musicIcon');
         const backgroundMusic = document.getElementById('backgroundMusic');
         let isPlaying = false;
 
-        // Hàm bật nhạc khi có tương tác lần đầu
+        // Hàm bật nhạc (gỡ muted)
         function enableMusic() {
             backgroundMusic.muted = false;
+            isPlaying = true;
+            musicIcon.className = 'fas fa-pause';
             backgroundMusic.play().then(() => {
-                isPlaying = true;
-                musicIcon.className = 'fas fa-pause';
-            }).catch(err => console.log("Không thể phát nhạc:", err));
-
-            // Xóa listener sau khi đã phát
+                    backgroundMusic.muted = false;
+                    musicIcon.className = 'fas fa-pause';
+                    isPlaying = true;
+                }).catch(err => console.log("Không thể phát nhạc:", err));
+            // Xóa listener sau khi bật nhạc 1 lần
             document.removeEventListener('scroll', enableMusic);
             document.removeEventListener('click', enableMusic);
-            document.removeEventListener('mousemove', enableMusic);
             document.removeEventListener('touchstart', enableMusic);
+            document.removeEventListener('keydown', enableMusic);
         }
 
-        // Lắng nghe các hành động đầu tiên
+        // Bắt sự kiện đầu tiên của user
         document.addEventListener('scroll', enableMusic);
         document.addEventListener('click', enableMusic);
-        document.addEventListener('mousemove', enableMusic);
         document.addEventListener('touchstart', enableMusic);
+        document.addEventListener('keydown', enableMusic);
 
         // Toggle bằng nút
         musicBtn.addEventListener('click', () => {
@@ -2644,8 +2648,11 @@
                 backgroundMusic.pause();
                 musicIcon.className = 'fas fa-music';
             } else {
-                backgroundMusic.play();
-                musicIcon.className = 'fas fa-pause';
+                backgroundMusic.play().then(() => {
+                    backgroundMusic.muted = false;
+                    musicIcon.className = 'fas fa-pause';
+                    isPlaying = true;
+                }).catch(err => console.log("Không thể phát nhạc:", err));
             }
             isPlaying = !isPlaying;
         });
