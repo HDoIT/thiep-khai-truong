@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -2770,9 +2769,52 @@
         </div>
     </div>
     <!-- Audio -->
-    <audio id="backgroundMusic" autoplay muted loop>
+    <audio id="backgroundMusic" loop>
         <source src="/images/videoplayback.m4a" type="audio/mpeg">
+        Trình duyệt không hỗ trợ HTML5 Audio.
     </audio>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("backgroundMusic");
+            const btn = document.getElementById("musicBtn");
+            const musicIcon = document.getElementById('musicIcon');
+
+            audio.volume = 0.8;
+
+            function startRotate() {
+                btn.style.animation = "rotate 2s linear infinite";
+            }
+            function stopRotate() {
+                btn.style.animation = "none";
+            }
+
+            // Khi user click button thì toggle play/pause
+            btn.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    musicIcon.className = 'fas fa-music';
+                    startRotate();
+                } else {
+                    audio.pause();
+                    musicIcon.className = 'fas fa-pause';
+                    stopRotate();
+                }
+            });
+
+            // Đảm bảo autoplay khi user lần đầu tương tác (nếu cần)
+            function tryPlay() {
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        musicIcon.className = 'fas fa-music';
+                        startRotate();
+                    }).catch(() => {/* bị chặn thì thôi */ });
+                }
+            }
+            window.addEventListener("scroll", tryPlay, { once: true });
+            document.addEventListener("click", tryPlay, { once: true });
+            document.addEventListener("touchstart", tryPlay, { once: true });
+        });
+    </script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script>
@@ -3172,48 +3214,48 @@
         const timer = setInterval(updateCountdown, 1000);
 
 
-        const musicBtn = document.getElementById('musicBtn');
-        const musicIcon = document.getElementById('musicIcon');
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        let isPlaying = false;
+        // const musicBtn = document.getElementById('musicBtn');
+        // const musicIcon = document.getElementById('musicIcon');
+        // const backgroundMusic = document.getElementById('backgroundMusic');
+        // let isPlaying = false;
 
-        // Hàm bật nhạc (gỡ muted)
-        function enableMusic() {
-            backgroundMusic.muted = false;
-            isPlaying = true;
-            musicIcon.className = 'fas fa-pause';
-            backgroundMusic.play().then(() => {
-                backgroundMusic.muted = false;
-                musicIcon.className = 'fas fa-pause';
-                isPlaying = true;
-            }).catch(err => console.log("Không thể phát nhạc:", err));
-            // Xóa listener sau khi bật nhạc 1 lần
-            document.removeEventListener('scroll', enableMusic);
-            document.removeEventListener('click', enableMusic);
-            document.removeEventListener('touchstart', enableMusic);
-            document.removeEventListener('keydown', enableMusic);
-        }
+        // // Hàm bật nhạc (gỡ muted)
+        // function enableMusic() {
+        //     backgroundMusic.muted = false;
+        //     isPlaying = true;
+        //     musicIcon.className = 'fas fa-pause';
+        //     backgroundMusic.play().then(() => {
+        //         backgroundMusic.muted = false;
+        //         musicIcon.className = 'fas fa-pause';
+        //         isPlaying = true;
+        //     }).catch(err => console.log("Không thể phát nhạc:", err));
+        //     // Xóa listener sau khi bật nhạc 1 lần
+        //     document.removeEventListener('scroll', enableMusic);
+        //     document.removeEventListener('click', enableMusic);
+        //     document.removeEventListener('touchstart', enableMusic);
+        //     document.removeEventListener('keydown', enableMusic);
+        // }
 
-        // Bắt sự kiện đầu tiên của user
-        document.addEventListener('scroll', enableMusic);
-        document.addEventListener('click', enableMusic);
-        document.addEventListener('touchstart', enableMusic);
-        document.addEventListener('keydown', enableMusic);
+        // // Bắt sự kiện đầu tiên của user
+        // document.addEventListener('scroll', enableMusic);
+        // document.addEventListener('click', enableMusic);
+        // document.addEventListener('touchstart', enableMusic);
+        // document.addEventListener('keydown', enableMusic);
 
-        // Toggle bằng nút
-        musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                backgroundMusic.pause();
-                musicIcon.className = 'fas fa-music';
-            } else {
-                backgroundMusic.play().then(() => {
-                    backgroundMusic.muted = false;
-                    musicIcon.className = 'fas fa-pause';
-                    isPlaying = true;
-                }).catch(err => console.log("Không thể phát nhạc:", err));
-            }
-            isPlaying = !isPlaying;
-        });
+        // // Toggle bằng nút
+        // musicBtn.addEventListener('click', () => {
+        //     if (isPlaying) {
+        //         backgroundMusic.pause();
+        //         musicIcon.className = 'fas fa-music';
+        //     } else {
+        //         backgroundMusic.play().then(() => {
+        //             backgroundMusic.muted = false;
+        //             musicIcon.className = 'fas fa-pause';
+        //             isPlaying = true;
+        //         }).catch(err => console.log("Không thể phát nhạc:", err));
+        //     }
+        //     isPlaying = !isPlaying;
+        // });
 
         // Scroll to top
         const scrollTopBtn = document.getElementById('scrollTopBtn');
